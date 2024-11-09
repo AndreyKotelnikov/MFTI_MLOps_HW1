@@ -1,0 +1,14 @@
+version: '3.8'
+
+networks:
+  MLOps:
+    name: MLOps_dev
+    driver: bridge 
+
+services:
+  vector-entropy-test:
+    build:
+      context: .
+    container_name: vector-entropy-test
+    networks:
+      - MLOps
